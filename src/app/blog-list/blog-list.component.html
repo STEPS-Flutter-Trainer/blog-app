@@ -1,0 +1,13 @@
+<div class="container mt-4">
+    <h2 class="mb-4">Blog Posts</h2>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let post of posts">
+        <h3>
+          <a [routerLink]="['/post', post.id]">{{ post.title }}</a>
+        </h3>
+        <p>{{ post.content }}</p>
+      </li>
+    </ul>
+    <a class="btn btn-primary mt-3" routerLink="/new">Create New Post</a>
+  </div>
+  
